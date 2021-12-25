@@ -12,7 +12,7 @@
     <string name="tag4">\\x15</string>
     <string name="tag5">\\x00</string>
 
-    <string name="Key1">ESC</string>
+    <string name="Key1">Esc</string>
     <string name="Code1">\\x29</string> <!-- Keyboard ESCAPE -->
     <string name="Key2">F1</string>
     <string name="Code2">\\x3a</string> <!-- Keyboard F1 -->

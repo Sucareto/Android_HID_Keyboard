@@ -2,7 +2,10 @@ package org.sucareto.androidhidkeyboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Service;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -49,6 +52,7 @@ public class Keyboard extends AppCompatActivity {
             int code;
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
+                    ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
                     //ctlcode="\\xFF"，取FF，转16进制int，运算后转16进制String，根据大小补充\\x0或\\x
                     code = Integer.parseInt(ctl_code.substring(2, 4), 16) + Integer.parseInt(((String) view.getTag()).substring(2, 4), 16);
                     ctl_code = code < 16 ? "\\x0" + Integer.toHexString(code) : "\\x" + Integer.toHexString(code);
@@ -82,6 +86,7 @@ public class Keyboard extends AppCompatActivity {
             String cmd = "su -c echo -n '";
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
+                    ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
                     Log.d("OnClick", "按下" + view.getTag());
                     key_code += view.getTag();
                     view.performClick();
