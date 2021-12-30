@@ -26,18 +26,9 @@
 
         <Button
             android:id="@+id/key1"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code1"
-            android:text="@string/Key1"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key1" />
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
@@ -49,63 +40,27 @@
 
         <Button
             android:id="@+id/key2"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code2"
-            android:text="@string/Key2"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key2" />
 
         <Button
             android:id="@+id/key3"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code3"
-            android:text="@string/Key3"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key3" />
 
         <Button
             android:id="@+id/key4"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code4"
-            android:text="@string/Key4"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key4" />
 
         <Button
             android:id="@+id/key5"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code5"
-            android:text="@string/Key5"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key5" />
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
@@ -116,63 +71,27 @@
 
         <Button
             android:id="@+id/key6"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code6"
-            android:text="@string/Key6"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key6" />
 
         <Button
             android:id="@+id/key7"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code7"
-            android:text="@string/Key7"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key7" />
 
         <Button
             android:id="@+id/key8"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code8"
-            android:text="@string/Key8"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key8" />
 
         <Button
             android:id="@+id/key9"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code9"
-            android:text="@string/Key9"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key9" />
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
@@ -183,65 +102,27 @@
 
         <Button
             android:id="@+id/key10"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code10"
-            android:text="@string/Key10"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key10" />
 
         <Button
             android:id="@+id/key11"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code11"
-            android:text="@string/Key11"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key11" />
 
         <Button
             android:id="@+id/key12"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code12"
-            android:text="@string/Key12"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key12" />
 
         <Button
             android:id="@+id/key13"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code13"
-            android:text="@string/Key13"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
-
-
+            android:text="@string/Key13" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -263,213 +144,101 @@
 
         <Button
             android:id="@+id/key14"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code14"
             android:text="@string/Key14"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key15"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code15"
             android:text="@string/Key15"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key16"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code16"
             android:text="@string/Key16"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key17"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code17"
             android:text="@string/Key17"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key18"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code18"
             android:text="@string/Key18"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key19"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code19"
             android:text="@string/Key19"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key20"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code20"
             android:text="@string/Key20"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key21"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code21"
             android:text="@string/Key21"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key22"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code22"
             android:text="@string/Key22"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key23"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code23"
             android:text="@string/Key23"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key24"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code24"
             android:text="@string/Key24"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key25"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code25"
             android:text="@string/Key25"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key26"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code26"
             android:text="@string/Key26"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key27"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            style="@style/DefaultButton"
             android:layout_weight="2.5"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code27"
-            android:text="@string/Key27"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key27" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -491,212 +260,101 @@
 
         <Button
             android:id="@+id/key28"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            style="@style/DefaultButton"
             android:layout_weight="1.5"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code28"
-            android:text="@string/Key28"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key28" />
 
         <Button
             android:id="@+id/key29"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code29"
             android:text="@string/Key29"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key30"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code30"
             android:text="@string/Key30"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key31"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code31"
             android:text="@string/Key31"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key32"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code32"
             android:text="@string/Key32"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key33"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code33"
             android:text="@string/Key33"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key34"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code34"
             android:text="@string/Key34"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key35"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code35"
             android:text="@string/Key35"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key36"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code36"
             android:text="@string/Key36"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key37"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code37"
             android:text="@string/Key37"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key38"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code38"
             android:text="@string/Key38"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key39"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code39"
             android:text="@string/Key39"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key40"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code40"
             android:text="@string/Key40"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key41"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            style="@style/ShiftButton"
             android:layout_weight="1.5"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code41"
             android:text="@string/Key41"
-            android:textAllCaps="false"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -719,198 +377,95 @@
 
         <Button
             android:id="@+id/key42"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            style="@style/DefaultButton"
             android:layout_weight="1.75"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code42"
             android:text="@string/Key42"
-            android:textAllCaps="false"
             android:textSize="11sp" />
 
         <Button
             android:id="@+id/key43"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code43"
             android:text="@string/Key43"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key44"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code44"
             android:text="@string/Key44"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key45"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code45"
             android:text="@string/Key45"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key46"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code46"
             android:text="@string/Key46"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key47"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code47"
             android:text="@string/Key47"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key48"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code48"
             android:text="@string/Key48"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key49"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code49"
             android:text="@string/Key49"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key50"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code50"
             android:text="@string/Key50"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key51"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code51"
             android:text="@string/Key51"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key52"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code52"
             android:text="@string/Key52"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key53"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code53"
             android:text="@string/Key53"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key54"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            style="@style/DefaultButton"
             android:layout_weight="2.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code54"
-            android:text="@string/Key54"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key54" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -932,183 +487,94 @@
 
         <Button
             android:id="@+id/ckey1"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            style="@style/DefaultButton"
             android:layout_weight="2.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code55"
-            android:text="@string/Key55"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key55" />
 
         <Button
             android:id="@+id/key55"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code56"
             android:text="@string/Key56"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key56"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code57"
             android:text="@string/Key57"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key57"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code58"
             android:text="@string/Key58"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key58"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code59"
             android:text="@string/Key59"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key59"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code60"
             android:text="@string/Key60"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key60"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code61"
             android:text="@string/Key61"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key61"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code62"
             android:text="@string/Key62"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key62"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code63"
             android:text="@string/Key63"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key63"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code64"
             android:text="@string/Key64"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/key64"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/ShiftButton"
             android:tag="@string/Code65"
             android:text="@string/Key65"
-            android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/ckey2"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="2.75"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            android:id="@+id/key65"
+            style="@style/DefaultButton"
+            android:layout_weight="1.25"
+            android:tag="@string/Code84"
+            android:text="@string/Key84" />
+
+        <Button
+            android:id="@+id/ckey5"
+            style="@style/DefaultButton"
+            android:layout_weight="1.25"
             android:tag="@string/Code66"
-            android:text="@string/Key66"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key66" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -1129,125 +595,63 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6">
 
         <Button
-            android:id="@+id/ckey3"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            android:id="@+id/ckey2"
+            style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code67"
-            android:text="@string/Key67"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key67" />
+
+        <Button
+            android:id="@+id/fn"
+            style="@style/DefaultButton"
+            android:text="@string/KeyFn" />
+
+        <Button
+            android:id="@+id/ckey3"
+            style="@style/DefaultButton"
+            android:tag="@string/Code68"
+            android:text="@string/Key68" />
 
         <Button
             android:id="@+id/ckey4"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:tag="@string/Code68"
-            android:text="@string/Key68"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
-
-        <Button
-            android:id="@+id/ckey5"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            style="@style/DefaultButton"
             android:tag="@string/Code69"
-            android:text="@string/Key69"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key69" />
 
         <Button
-            android:id="@+id/key65"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="6.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+            android:id="@+id/key67"
+            style="@style/DefaultButton"
+            android:layout_weight="6"
             android:tag="@string/Code70"
-            android:text="@string/Key70"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key70" />
 
         <Button
-            android:id="@+id/ckey6"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            android:id="@+id/key68"
+            style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:tag="@string/Code71"
-            android:text="@string/Key71"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
-
-        <Button
-            android:id="@+id/ckey7"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:tag="@string/Code72"
-            android:text="@string/Key72"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
-
-        <Button
-            android:id="@+id/key66"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
-            android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
             android:tag="@string/Code73"
-            android:text="@string/Key73"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:text="@string/Key73" />
 
         <Button
-            android:id="@+id/ckey8"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_marginHorizontal="2dp"
+            android:id="@+id/key69"
+            style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:tag="@string/Code74"
-            android:text="@string/Key74"
-            android:textAllCaps="false"
-            android:textSize="12sp" />
+            android:tag="@string/Code85"
+            android:text="@string/Key85" />
 
+        <Button
+            android:id="@+id/key70"
+            style="@style/DefaultButton"
+            android:layout_weight="1.25"
+            android:tag="@string/Code86"
+            android:text="@string/Key86" />
+
+        <Button
+            android:id="@+id/key71"
+            style="@style/DefaultButton"
+            android:layout_weight="1.25"
+            android:tag="@string/Code87"
+            android:text="@string/Key87" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -1270,5 +674,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.99" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
