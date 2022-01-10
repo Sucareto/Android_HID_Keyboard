@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HID键盘</string>
+    <string name="msg_e_root">获取 root 权限失败。</string>
+    <string name="msg_e_hid">未开启 HID 功能？</string>
+</resources>
