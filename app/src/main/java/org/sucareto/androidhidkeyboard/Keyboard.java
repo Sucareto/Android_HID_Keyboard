@@ -8,10 +8,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.topjohnwu.superuser.Shell;
+import com.topjohnwu.superuser.io.SuFile;
 
 import org.sucareto.androidhidkeyboard.databinding.ActivityKeyboardBinding;
 
@@ -24,8 +26,6 @@ public class Keyboard extends AppCompatActivity {
                 .setTimeout(10)//设置等待超时，默认是20s
         );
     }
-
-    Boolean FnEnable = false;
 
     String ctl_code = "\\x00";
     String key_code = "\\x00";
@@ -41,14 +41,20 @@ public class Keyboard extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(binding.getRoot());
-        //TODO 申请权限与初始化设备名
-        //TODO 权限申请失败时弹窗提示
+        if (!Shell.getShell().isRoot()) {
+            Toast.makeText(this, R.string.msg_e_root, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (!SuFile.open("/config/usb_gadget/keyboard/").exists()) {
+            Toast.makeText(this, R.string.msg_e_hid, Toast.LENGTH_LONG).show();
+            return;
+        }
         //TODO 使用其他初始化方式，解决id变动的问题
         findViewById(R.id.fn).setOnTouchListener(new FnKeyOnTouch());
         KeyOnTouch keyOnTouch = new KeyOnTouch();
         for (int i = 1; i < 72; i++) {
             try {
-                findViewById(getResources().getIdentifier("key" + i, "id",
+                findViewById(getResources().getIdentifier("Btn" + i, "id",
                         getPackageName())).setOnTouchListener(keyOnTouch);
             } catch (Exception e) {
                 Log.e("setKeyOnTouch", "在" + i + "的时候：" + e);
@@ -58,13 +64,12 @@ public class Keyboard extends AppCompatActivity {
         CtrlKeyOnTouch ctrlKeyOnTouch = new CtrlKeyOnTouch();
         for (int i = 1; i < 6; i++) {
             try {
-                findViewById(getResources().getIdentifier("ckey" + i, "id",
+                findViewById(getResources().getIdentifier("CtrlBtn" + i, "id",
                         getPackageName())).setOnTouchListener(ctrlKeyOnTouch);
             } catch (Exception e) {
                 Log.e("setCtrlKeyOnTouch", "在" + i + "的时候：" + e);
             }
         }
-
     }
 
     @Override
@@ -134,6 +139,7 @@ public class Keyboard extends AppCompatActivity {
 
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
+            boolean FnEnable;
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
@@ -147,20 +153,23 @@ public class Keyboard extends AppCompatActivity {
                 default:
                     return false;
             }
-            ((Button) findViewById(R.id.key27)).setText(getResources().getString(FnEnable ? R.string.Key81 : R.string.Key27));//Backspace,Delete
-            findViewById(R.id.key27).setTag(getResources().getString(FnEnable ? R.string.Code81 : R.string.Code27));
+            ((Button) findViewById(R.id.Btn12)).setText(getResources().getString(FnEnable ? R.string.KeyText78 : R.string.KeyText12));//Insert
+            findViewById(R.id.Btn12).setTag(getResources().getString(FnEnable ? R.string.KeyCode78 : R.string.KeyCode12));
 
-            ((Button) findViewById(R.id.key65)).setText(getResources().getString(FnEnable ? R.string.Key80 : R.string.Key84));//Up,PgUp
-            findViewById(R.id.key65).setTag(getResources().getString(FnEnable ? R.string.Code80 : R.string.Code84));
+            ((Button) findViewById(R.id.Btn13)).setText(getResources().getString(FnEnable ? R.string.KeyText81 : R.string.KeyText13));//Backspace,Delete
+            findViewById(R.id.Btn13).setTag(getResources().getString(FnEnable ? R.string.KeyCode81 : R.string.KeyCode13));
 
-            ((Button) findViewById(R.id.key69)).setText(getResources().getString(FnEnable ? R.string.Key79 : R.string.Key85));//Left,Home
-            findViewById(R.id.key69).setTag(getResources().getString(FnEnable ? R.string.Code79 : R.string.Code85));
+            ((Button) findViewById(R.id.Btn65)).setText(getResources().getString(FnEnable ? R.string.KeyText80 : R.string.KeyText84));//Up,PgUp
+            findViewById(R.id.Btn65).setTag(getResources().getString(FnEnable ? R.string.KeyCode80 : R.string.KeyCode84));
 
-            ((Button) findViewById(R.id.key70)).setText(getResources().getString(FnEnable ? R.string.Key83 : R.string.Key86));//Down,PgDn
-            findViewById(R.id.key70).setTag(getResources().getString(FnEnable ? R.string.Code83 : R.string.Code86));
+            ((Button) findViewById(R.id.Btn69)).setText(getResources().getString(FnEnable ? R.string.KeyText79 : R.string.KeyText85));//Left,Home
+            findViewById(R.id.Btn69).setTag(getResources().getString(FnEnable ? R.string.KeyCode79 : R.string.KeyCode85));
 
-            ((Button) findViewById(R.id.key71)).setText(getResources().getString(FnEnable ? R.string.Key82 : R.string.Key87));//Right,End
-            findViewById(R.id.key71).setTag(getResources().getString(FnEnable ? R.string.Code82 : R.string.Code87));
+            ((Button) findViewById(R.id.Btn70)).setText(getResources().getString(FnEnable ? R.string.KeyText83 : R.string.KeyText86));//Down,PgDn
+            findViewById(R.id.Btn70).setTag(getResources().getString(FnEnable ? R.string.KeyCode83 : R.string.KeyCode86));
+
+            ((Button) findViewById(R.id.Btn71)).setText(getResources().getString(FnEnable ? R.string.KeyText82 : R.string.KeyText87));//Right,End
+            findViewById(R.id.Btn71).setTag(getResources().getString(FnEnable ? R.string.KeyCode82 : R.string.KeyCode87));
             return false;
         }
     }

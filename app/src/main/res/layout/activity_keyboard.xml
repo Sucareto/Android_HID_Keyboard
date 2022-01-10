@@ -25,10 +25,10 @@
         app:layout_constraintTop_toTopOf="@+id/guideline1">
 
         <Button
-            android:id="@+id/key1"
+            android:id="@+id/Btn1"
             style="@style/DefaultButton"
-            android:tag="@string/Code1"
-            android:text="@string/Key1" />
+            android:tag="@string/KeyCode1"
+            android:text="@string/KeyText1" />
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
@@ -39,28 +39,28 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/key2"
+            android:id="@+id/Btn2"
             style="@style/DefaultButton"
-            android:tag="@string/Code2"
-            android:text="@string/Key2" />
+            android:tag="@string/KeyCode2"
+            android:text="@string/KeyText2" />
 
         <Button
-            android:id="@+id/key3"
+            android:id="@+id/Btn3"
             style="@style/DefaultButton"
-            android:tag="@string/Code3"
-            android:text="@string/Key3" />
+            android:tag="@string/KeyCode3"
+            android:text="@string/KeyText3" />
 
         <Button
-            android:id="@+id/key4"
+            android:id="@+id/Btn4"
             style="@style/DefaultButton"
-            android:tag="@string/Code4"
-            android:text="@string/Key4" />
+            android:tag="@string/KeyCode4"
+            android:text="@string/KeyText4" />
 
         <Button
-            android:id="@+id/key5"
+            android:id="@+id/Btn5"
             style="@style/DefaultButton"
-            android:tag="@string/Code5"
-            android:text="@string/Key5" />
+            android:tag="@string/KeyCode5"
+            android:text="@string/KeyText5" />
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
@@ -70,28 +70,28 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/key6"
+            android:id="@+id/Btn6"
             style="@style/DefaultButton"
-            android:tag="@string/Code6"
-            android:text="@string/Key6" />
+            android:tag="@string/KeyCode6"
+            android:text="@string/KeyText6" />
 
         <Button
-            android:id="@+id/key7"
+            android:id="@+id/Btn7"
             style="@style/DefaultButton"
-            android:tag="@string/Code7"
-            android:text="@string/Key7" />
+            android:tag="@string/KeyCode7"
+            android:text="@string/KeyText7" />
 
         <Button
-            android:id="@+id/key8"
+            android:id="@+id/Btn8"
             style="@style/DefaultButton"
-            android:tag="@string/Code8"
-            android:text="@string/Key8" />
+            android:tag="@string/KeyCode8"
+            android:text="@string/KeyText8" />
 
         <Button
-            android:id="@+id/key9"
+            android:id="@+id/Btn9"
             style="@style/DefaultButton"
-            android:tag="@string/Code9"
-            android:text="@string/Key9" />
+            android:tag="@string/KeyCode9"
+            android:text="@string/KeyText9" />
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
@@ -101,28 +101,28 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/key10"
+            android:id="@+id/Btn10"
             style="@style/DefaultButton"
-            android:tag="@string/Code10"
-            android:text="@string/Key10" />
+            android:tag="@string/KeyCode10"
+            android:text="@string/KeyText10" />
 
         <Button
-            android:id="@+id/key11"
+            android:id="@+id/Btn11"
             style="@style/DefaultButton"
-            android:tag="@string/Code11"
-            android:text="@string/Key11" />
+            android:tag="@string/KeyCode11"
+            android:text="@string/KeyText11" />
 
         <Button
-            android:id="@+id/key12"
+            android:id="@+id/Btn12"
             style="@style/DefaultButton"
-            android:tag="@string/Code12"
-            android:text="@string/Key12" />
+            android:tag="@string/KeyCode12"
+            android:text="@string/KeyText12" />
 
         <Button
-            android:id="@+id/key13"
+            android:id="@+id/Btn13"
             style="@style/DefaultButton"
-            android:tag="@string/Code13"
-            android:text="@string/Key13" />
+            android:tag="@string/KeyCode13"
+            android:text="@string/KeyText13" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -143,102 +143,102 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
         <Button
-            android:id="@+id/key14"
+            android:id="@+id/Btn14"
             style="@style/ShiftButton"
-            android:tag="@string/Code14"
-            android:text="@string/Key14"
+            android:tag="@string/KeyCode14"
+            android:text="@string/KeyText14"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key15"
+            android:id="@+id/Btn15"
             style="@style/ShiftButton"
-            android:tag="@string/Code15"
-            android:text="@string/Key15"
+            android:tag="@string/KeyCode15"
+            android:text="@string/KeyText15"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key16"
+            android:id="@+id/Btn16"
             style="@style/ShiftButton"
-            android:tag="@string/Code16"
-            android:text="@string/Key16"
+            android:tag="@string/KeyCode16"
+            android:text="@string/KeyText16"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key17"
+            android:id="@+id/Btn17"
             style="@style/ShiftButton"
-            android:tag="@string/Code17"
-            android:text="@string/Key17"
+            android:tag="@string/KeyCode17"
+            android:text="@string/KeyText17"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key18"
+            android:id="@+id/Btn18"
             style="@style/ShiftButton"
-            android:tag="@string/Code18"
-            android:text="@string/Key18"
+            android:tag="@string/KeyCode18"
+            android:text="@string/KeyText18"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key19"
+            android:id="@+id/Btn19"
             style="@style/ShiftButton"
-            android:tag="@string/Code19"
-            android:text="@string/Key19"
+            android:tag="@string/KeyCode19"
+            android:text="@string/KeyText19"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key20"
+            android:id="@+id/Btn20"
             style="@style/ShiftButton"
-            android:tag="@string/Code20"
-            android:text="@string/Key20"
+            android:tag="@string/KeyCode20"
+            android:text="@string/KeyText20"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key21"
+            android:id="@+id/Btn21"
             style="@style/ShiftButton"
-            android:tag="@string/Code21"
-            android:text="@string/Key21"
+            android:tag="@string/KeyCode21"
+            android:text="@string/KeyText21"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key22"
+            android:id="@+id/Btn22"
             style="@style/ShiftButton"
-            android:tag="@string/Code22"
-            android:text="@string/Key22"
+            android:tag="@string/KeyCode22"
+            android:text="@string/KeyText22"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key23"
+            android:id="@+id/Btn23"
             style="@style/ShiftButton"
-            android:tag="@string/Code23"
-            android:text="@string/Key23"
+            android:tag="@string/KeyCode23"
+            android:text="@string/KeyText23"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key24"
+            android:id="@+id/Btn24"
             style="@style/ShiftButton"
-            android:tag="@string/Code24"
-            android:text="@string/Key24"
+            android:tag="@string/KeyCode24"
+            android:text="@string/KeyText24"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key25"
+            android:id="@+id/Btn25"
             style="@style/ShiftButton"
-            android:tag="@string/Code25"
-            android:text="@string/Key25"
+            android:tag="@string/KeyCode25"
+            android:text="@string/KeyText25"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key26"
+            android:id="@+id/Btn26"
             style="@style/ShiftButton"
-            android:tag="@string/Code26"
-            android:text="@string/Key26"
+            android:tag="@string/KeyCode26"
+            android:text="@string/KeyText26"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key27"
+            android:id="@+id/Btn27"
             style="@style/DefaultButton"
             android:layout_weight="2.5"
-            android:tag="@string/Code27"
-            android:text="@string/Key27" />
+            android:tag="@string/KeyCode27"
+            android:text="@string/KeyText27" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -259,102 +259,102 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3">
 
         <Button
-            android:id="@+id/key28"
+            android:id="@+id/Btn28"
             style="@style/DefaultButton"
             android:layout_weight="1.5"
-            android:tag="@string/Code28"
-            android:text="@string/Key28" />
+            android:tag="@string/KeyCode28"
+            android:text="@string/KeyText28" />
 
         <Button
-            android:id="@+id/key29"
+            android:id="@+id/Btn29"
             style="@style/DefaultButton"
-            android:tag="@string/Code29"
-            android:text="@string/Key29"
+            android:tag="@string/KeyCode29"
+            android:text="@string/KeyText29"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key30"
+            android:id="@+id/Btn30"
             style="@style/DefaultButton"
-            android:tag="@string/Code30"
-            android:text="@string/Key30"
+            android:tag="@string/KeyCode30"
+            android:text="@string/KeyText30"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key31"
+            android:id="@+id/Btn31"
             style="@style/DefaultButton"
-            android:tag="@string/Code31"
-            android:text="@string/Key31"
+            android:tag="@string/KeyCode31"
+            android:text="@string/KeyText31"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key32"
+            android:id="@+id/Btn32"
             style="@style/DefaultButton"
-            android:tag="@string/Code32"
-            android:text="@string/Key32"
+            android:tag="@string/KeyCode32"
+            android:text="@string/KeyText32"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key33"
+            android:id="@+id/Btn33"
             style="@style/DefaultButton"
-            android:tag="@string/Code33"
-            android:text="@string/Key33"
+            android:tag="@string/KeyCode33"
+            android:text="@string/KeyText33"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key34"
+            android:id="@+id/Btn34"
             style="@style/DefaultButton"
-            android:tag="@string/Code34"
-            android:text="@string/Key34"
+            android:tag="@string/KeyCode34"
+            android:text="@string/KeyText34"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key35"
+            android:id="@+id/Btn35"
             style="@style/DefaultButton"
-            android:tag="@string/Code35"
-            android:text="@string/Key35"
+            android:tag="@string/KeyCode35"
+            android:text="@string/KeyText35"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key36"
+            android:id="@+id/Btn36"
             style="@style/DefaultButton"
-            android:tag="@string/Code36"
-            android:text="@string/Key36"
+            android:tag="@string/KeyCode36"
+            android:text="@string/KeyText36"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key37"
+            android:id="@+id/Btn37"
             style="@style/DefaultButton"
-            android:tag="@string/Code37"
-            android:text="@string/Key37"
+            android:tag="@string/KeyCode37"
+            android:text="@string/KeyText37"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key38"
+            android:id="@+id/Btn38"
             style="@style/DefaultButton"
-            android:tag="@string/Code38"
-            android:text="@string/Key38"
+            android:tag="@string/KeyCode38"
+            android:text="@string/KeyText38"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key39"
+            android:id="@+id/Btn39"
             style="@style/ShiftButton"
-            android:tag="@string/Code39"
-            android:text="@string/Key39"
+            android:tag="@string/KeyCode39"
+            android:text="@string/KeyText39"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key40"
+            android:id="@+id/Btn40"
             style="@style/ShiftButton"
-            android:tag="@string/Code40"
-            android:text="@string/Key40"
+            android:tag="@string/KeyCode40"
+            android:text="@string/KeyText40"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key41"
+            android:id="@+id/Btn41"
             style="@style/ShiftButton"
             android:layout_weight="1.5"
-            android:tag="@string/Code41"
-            android:text="@string/Key41"
+            android:tag="@string/KeyCode41"
+            android:text="@string/KeyText41"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -376,96 +376,96 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4">
 
         <Button
-            android:id="@+id/key42"
+            android:id="@+id/Btn42"
             style="@style/DefaultButton"
             android:layout_weight="1.75"
-            android:tag="@string/Code42"
-            android:text="@string/Key42"
+            android:tag="@string/KeyCode42"
+            android:text="@string/KeyText42"
             android:textSize="11sp" />
 
         <Button
-            android:id="@+id/key43"
+            android:id="@+id/Btn43"
             style="@style/DefaultButton"
-            android:tag="@string/Code43"
-            android:text="@string/Key43"
+            android:tag="@string/KeyCode43"
+            android:text="@string/KeyText43"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key44"
+            android:id="@+id/Btn44"
             style="@style/DefaultButton"
-            android:tag="@string/Code44"
-            android:text="@string/Key44"
+            android:tag="@string/KeyCode44"
+            android:text="@string/KeyText44"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key45"
+            android:id="@+id/Btn45"
             style="@style/DefaultButton"
-            android:tag="@string/Code45"
-            android:text="@string/Key45"
+            android:tag="@string/KeyCode45"
+            android:text="@string/KeyText45"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key46"
+            android:id="@+id/Btn46"
             style="@style/DefaultButton"
-            android:tag="@string/Code46"
-            android:text="@string/Key46"
+            android:tag="@string/KeyCode46"
+            android:text="@string/KeyText46"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key47"
+            android:id="@+id/Btn47"
             style="@style/DefaultButton"
-            android:tag="@string/Code47"
-            android:text="@string/Key47"
+            android:tag="@string/KeyCode47"
+            android:text="@string/KeyText47"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key48"
+            android:id="@+id/Btn48"
             style="@style/DefaultButton"
-            android:tag="@string/Code48"
-            android:text="@string/Key48"
+            android:tag="@string/KeyCode48"
+            android:text="@string/KeyText48"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key49"
+            android:id="@+id/Btn49"
             style="@style/DefaultButton"
-            android:tag="@string/Code49"
-            android:text="@string/Key49"
+            android:tag="@string/KeyCode49"
+            android:text="@string/KeyText49"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key50"
+            android:id="@+id/Btn50"
             style="@style/DefaultButton"
-            android:tag="@string/Code50"
-            android:text="@string/Key50"
+            android:tag="@string/KeyCode50"
+            android:text="@string/KeyText50"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key51"
+            android:id="@+id/Btn51"
             style="@style/DefaultButton"
-            android:tag="@string/Code51"
-            android:text="@string/Key51"
+            android:tag="@string/KeyCode51"
+            android:text="@string/KeyText51"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key52"
+            android:id="@+id/Btn52"
             style="@style/ShiftButton"
-            android:tag="@string/Code52"
-            android:text="@string/Key52"
+            android:tag="@string/KeyCode52"
+            android:text="@string/KeyText52"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key53"
+            android:id="@+id/Btn53"
             style="@style/ShiftButton"
-            android:tag="@string/Code53"
-            android:text="@string/Key53"
+            android:tag="@string/KeyCode53"
+            android:text="@string/KeyText53"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key54"
+            android:id="@+id/Btn54"
             style="@style/DefaultButton"
             android:layout_weight="2.25"
-            android:tag="@string/Code54"
-            android:text="@string/Key54" />
+            android:tag="@string/KeyCode54"
+            android:text="@string/KeyText54" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -486,95 +486,95 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5">
 
         <Button
-            android:id="@+id/ckey1"
+            android:id="@+id/CtrlBtn1"
             style="@style/DefaultButton"
             android:layout_weight="2.25"
-            android:tag="@string/Code55"
-            android:text="@string/Key55" />
+            android:tag="@string/KeyCode55"
+            android:text="@string/KeyText55" />
 
         <Button
-            android:id="@+id/key55"
+            android:id="@+id/Btn55"
             style="@style/DefaultButton"
-            android:tag="@string/Code56"
-            android:text="@string/Key56"
+            android:tag="@string/KeyCode56"
+            android:text="@string/KeyText56"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key56"
+            android:id="@+id/Btn56"
             style="@style/DefaultButton"
-            android:tag="@string/Code57"
-            android:text="@string/Key57"
+            android:tag="@string/KeyCode57"
+            android:text="@string/KeyText57"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key57"
+            android:id="@+id/Btn57"
             style="@style/DefaultButton"
-            android:tag="@string/Code58"
-            android:text="@string/Key58"
+            android:tag="@string/KeyCode58"
+            android:text="@string/KeyText58"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key58"
+            android:id="@+id/Btn58"
             style="@style/DefaultButton"
-            android:tag="@string/Code59"
-            android:text="@string/Key59"
+            android:tag="@string/KeyCode59"
+            android:text="@string/KeyText59"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key59"
+            android:id="@+id/Btn59"
             style="@style/DefaultButton"
-            android:tag="@string/Code60"
-            android:text="@string/Key60"
+            android:tag="@string/KeyCode60"
+            android:text="@string/KeyText60"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key60"
+            android:id="@+id/Btn60"
             style="@style/DefaultButton"
-            android:tag="@string/Code61"
-            android:text="@string/Key61"
+            android:tag="@string/KeyCode61"
+            android:text="@string/KeyText61"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key61"
+            android:id="@+id/Btn61"
             style="@style/DefaultButton"
-            android:tag="@string/Code62"
-            android:text="@string/Key62"
+            android:tag="@string/KeyCode62"
+            android:text="@string/KeyText62"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key62"
+            android:id="@+id/Btn62"
             style="@style/ShiftButton"
-            android:tag="@string/Code63"
-            android:text="@string/Key63"
+            android:tag="@string/KeyCode63"
+            android:text="@string/KeyText63"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key63"
+            android:id="@+id/Btn63"
             style="@style/ShiftButton"
-            android:tag="@string/Code64"
-            android:text="@string/Key64"
+            android:tag="@string/KeyCode64"
+            android:text="@string/KeyText64"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key64"
+            android:id="@+id/Btn64"
             style="@style/ShiftButton"
-            android:tag="@string/Code65"
-            android:text="@string/Key65"
+            android:tag="@string/KeyCode65"
+            android:text="@string/KeyText65"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/key65"
+            android:id="@+id/Btn65"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code84"
-            android:text="@string/Key84" />
+            android:tag="@string/KeyCode84"
+            android:text="@string/KeyText84" />
 
         <Button
-            android:id="@+id/ckey5"
+            android:id="@+id/CtrlBtn5"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code66"
-            android:text="@string/Key66" />
+            android:tag="@string/KeyCode66"
+            android:text="@string/KeyText66" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -595,63 +595,63 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6">
 
         <Button
-            android:id="@+id/ckey2"
+            android:id="@+id/CtrlBtn2"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code67"
-            android:text="@string/Key67" />
+            android:tag="@string/KeyCode67"
+            android:text="@string/KeyText67" />
 
         <Button
             android:id="@+id/fn"
             style="@style/DefaultButton"
-            android:text="@string/KeyFn" />
+            android:text="@string/KeyTextFn" />
 
         <Button
-            android:id="@+id/ckey3"
+            android:id="@+id/CtrlBtn3"
             style="@style/DefaultButton"
-            android:tag="@string/Code68"
-            android:text="@string/Key68" />
+            android:tag="@string/KeyCode68"
+            android:text="@string/KeyText68" />
 
         <Button
-            android:id="@+id/ckey4"
+            android:id="@+id/CtrlBtn4"
             style="@style/DefaultButton"
-            android:tag="@string/Code69"
-            android:text="@string/Key69" />
+            android:tag="@string/KeyCode69"
+            android:text="@string/KeyText69" />
 
         <Button
-            android:id="@+id/key67"
+            android:id="@+id/Btn67"
             style="@style/DefaultButton"
             android:layout_weight="6"
-            android:tag="@string/Code70"
-            android:text="@string/Key70" />
+            android:tag="@string/KeyCode70"
+            android:text="@string/KeyText70" />
 
         <Button
-            android:id="@+id/key68"
+            android:id="@+id/Btn68"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code73"
-            android:text="@string/Key73" />
+            android:tag="@string/KeyCode73"
+            android:text="@string/KeyText73" />
 
         <Button
-            android:id="@+id/key69"
+            android:id="@+id/Btn69"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code85"
-            android:text="@string/Key85" />
+            android:tag="@string/KeyCode85"
+            android:text="@string/KeyText85" />
 
         <Button
-            android:id="@+id/key70"
+            android:id="@+id/Btn70"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code86"
-            android:text="@string/Key86" />
+            android:tag="@string/KeyCode86"
+            android:text="@string/KeyText86" />
 
         <Button
-            android:id="@+id/key71"
+            android:id="@+id/Btn71"
             style="@style/DefaultButton"
             android:layout_weight="1.25"
-            android:tag="@string/Code87"
-            android:text="@string/Key87" />
+            android:tag="@string/KeyCode87"
+            android:text="@string/KeyText87" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
