@@ -14,21 +14,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.topjohnwu.superuser.Shell;
 import com.topjohnwu.superuser.io.SuFile;
+import com.topjohnwu.superuser.io.SuFileOutputStream;
 
 import org.sucareto.androidhidkeyboard.databinding.ActivityKeyboardBinding;
 
+import java.io.OutputStream;
+
 
 public class Keyboard extends AppCompatActivity {
-    static {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG;//启用运行命令Debug输出
-        Shell.setDefaultBuilder(Shell.Builder.create()//覆盖默认的创建函数
-                .setFlags(Shell.FLAG_REDIRECT_STDERR)//错误输出重定向到标准输出
-                .setTimeout(10)//设置等待超时，默认是20s
-        );
-    }
-
-    String ctl_code = "\\x00";
-    String key_code = "\\x00";
+    byte[] keycode;
+    OutputStream HidStream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +40,11 @@ public class Keyboard extends AppCompatActivity {
             Toast.makeText(this, R.string.msg_e_root, Toast.LENGTH_LONG).show();
             return;
         }
-        if (!SuFile.open("/config/usb_gadget/keyboard/").exists()) {
+        if (!SuFile.open("/config/usb_gadget/keyboard/").exists() && !SuFile.open("/dev/hidg0").exists()) {
             Toast.makeText(this, R.string.msg_e_hid, Toast.LENGTH_LONG).show();
             return;
         }
+
         //TODO 使用其他初始化方式，解决id变动的问题
         findViewById(R.id.fn).setOnTouchListener(new FnKeyOnTouch());
         KeyOnTouch keyOnTouch = new KeyOnTouch();
@@ -74,37 +70,53 @@ public class Keyboard extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        Shell.su("echo -n '\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00' > /dev/hidg0").submit();
         super.onStop();
+        try {
+            HidStream.write(new byte[]{0, 0, 0, 0, 0, 0, 0, 0});
+            HidStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        keycode = new byte[8];
+        try {
+            HidStream = SuFileOutputStream.open(SuFile.open("/dev/hidg0"));
+        } catch (Exception e) {
+            Toast.makeText(this, "hid设备文件打开失败", Toast.LENGTH_LONG).show();
+            Log.e("onStart", String.valueOf(e));
+        }
     }
 
     class CtrlKeyOnTouch implements View.OnTouchListener {
 
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
-            //TODO 按钮锁
-            String cmd = "echo -n '";
-            int code;
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
-                    //ctlcode="\\xFF"，取FF，转16进制int，运算后转16进制String，根据大小补充\\x0或\\x
-                    code = Integer.parseInt(ctl_code.substring(2, 4), 16) + Integer.parseInt(((String) view.getTag()).substring(2, 4), 16);
-                    ctl_code = code < 16 ? "\\x0" + Integer.toHexString(code) : "\\x" + Integer.toHexString(code);
-                    Log.e("CtrlKeyOnTouch", "按下控制键：" + ctl_code);
-                    view.performClick();
+                    keycode[0] += Integer.parseInt(view.getTag().toString(), 16);
+                    Log.e("CtrlKeyOnTouch", "按下控制键：" + keycode[0]);
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    code = Integer.parseInt(ctl_code.substring(2, 4), 16) - Integer.parseInt(((String) view.getTag()).substring(2, 4), 16);
-                    ctl_code = code < 16 ? "\\x0" + Integer.toHexString(code) : "\\x" + Integer.toHexString(code);
-                    Log.e("CtrlKeyOnTouch", "松开控制键：" + ctl_code);
+                    keycode[0] -= Integer.parseInt(view.getTag().toString(), 16);
+                    view.performClick();
+                    Log.e("CtrlKeyOnTouch", "松开控制键：" + keycode[0]);
                     break;
                 default:
                     return false;
             }
-            cmd += (ctl_code + key_code + "\\x00\\x00\\x00\\x00\\x00\\x00").substring(0, "\\x00".length() * 8) + "' > /dev/hidg0";
-            Shell.su(cmd).submit();
+            try {
+                HidStream.write(keycode);
+            } catch (Exception e) {
+                Log.e("CtrlKeyOnTouch", String.valueOf(e));
+            }
             return false;
         }
     }
@@ -113,24 +125,36 @@ public class Keyboard extends AppCompatActivity {
 
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
-            String cmd = "echo -n '";
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
+                    for (int i = 2; i < 8; i++) {
+                        if (keycode[i] == 0) {
+                            keycode[i] = (byte) Integer.parseInt(view.getTag().toString(), 16);
+                            break;
+                        }
+                    }
                     Log.e("KeyOnTouch", "按下" + view.getTag());
-                    key_code += view.getTag();
-                    view.performClick();
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
+                    int code = Integer.parseInt(view.getTag().toString(), 16);
+                    for (int i = 2; i < 8; i++) {
+                        if (keycode[i] == code) {
+                            keycode[i] = 0;
+                        }
+                    }
+                    view.performClick();
                     Log.e("KeyOnTouch", "松开" + view.getTag());
-                    key_code = key_code.replace((String) view.getTag(), "");
                     break;
                 default:
                     return false;
             }
-            cmd += (ctl_code + key_code + "\\x00\\x00\\x00\\x00\\x00\\x00").substring(0, "\\x00".length() * 8) + "' > /dev/hidg0";
-            Shell.su(cmd).submit();
+            try {
+                HidStream.write(keycode);
+            } catch (Exception e) {
+                Log.e("CtrlKeyOnTouch", String.valueOf(e));
+            }
             return false;
         }
     }
@@ -144,11 +168,11 @@ public class Keyboard extends AppCompatActivity {
                 case MotionEvent.ACTION_DOWN:
                     ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
                     FnEnable = true;
-                    view.performClick();
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
                     FnEnable = false;
+                    view.performClick();
                     break;
                 default:
                     return false;

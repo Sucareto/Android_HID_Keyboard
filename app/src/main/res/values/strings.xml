@@ -1,179 +1,179 @@
 <resources>
     <string name="app_name">Android HID Keyboard</string>
     <string name="KeyText1" translatable="false">Esc</string>
-    <string name="KeyCode1" translatable="false">\\x29</string> <!-- Keyboard ESCAPE -->
+    <string name="KeyCode1" translatable="false">29</string> <!-- Keyboard ESCAPE -->
     <string name="KeyText2" translatable="false">F1</string>
-    <string name="KeyCode2" translatable="false">\\x3a</string> <!-- Keyboard F1 -->
+    <string name="KeyCode2" translatable="false">3a</string> <!-- Keyboard F1 -->
     <string name="KeyText3" translatable="false">F2</string>
-    <string name="KeyCode3" translatable="false">\\x3b</string> <!-- Keyboard F2 -->
+    <string name="KeyCode3" translatable="false">3b</string> <!-- Keyboard F2 -->
     <string name="KeyText4" translatable="false">F3</string>
-    <string name="KeyCode4" translatable="false">\\x3c</string> <!-- Keyboard F3 -->
+    <string name="KeyCode4" translatable="false">3c</string> <!-- Keyboard F3 -->
     <string name="KeyText5" translatable="false">F4</string>
-    <string name="KeyCode5" translatable="false">\\x3d</string> <!-- Keyboard F4 -->
+    <string name="KeyCode5" translatable="false">3d</string> <!-- Keyboard F4 -->
     <string name="KeyText6" translatable="false">F5</string>
-    <string name="KeyCode6" translatable="false">\\x3e</string> <!-- Keyboard F5 -->
+    <string name="KeyCode6" translatable="false">3e</string> <!-- Keyboard F5 -->
     <string name="KeyText7" translatable="false">F6</string>
-    <string name="KeyCode7" translatable="false">\\x3f</string> <!-- Keyboard F6 -->
+    <string name="KeyCode7" translatable="false">3f</string> <!-- Keyboard F6 -->
     <string name="KeyText8" translatable="false">F7</string>
-    <string name="KeyCode8" translatable="false">\\x40</string> <!-- Keyboard F7 -->
+    <string name="KeyCode8" translatable="false">40</string> <!-- Keyboard F7 -->
     <string name="KeyText9" translatable="false">F8</string>
-    <string name="KeyCode9" translatable="false">\\x41</string> <!-- Keyboard F8 -->
+    <string name="KeyCode9" translatable="false">41</string> <!-- Keyboard F8 -->
     <string name="KeyText10" translatable="false">F9</string>
-    <string name="KeyCode10" translatable="false">\\x42</string> <!-- Keyboard F9 -->
+    <string name="KeyCode10" translatable="false">42</string> <!-- Keyboard F9 -->
     <string name="KeyText11" translatable="false">F10</string>
-    <string name="KeyCode11" translatable="false">\\x43</string> <!-- Keyboard F10 -->
+    <string name="KeyCode11" translatable="false">43</string> <!-- Keyboard F10 -->
     <string name="KeyText12" translatable="false">F11</string>
-    <string name="KeyCode12" translatable="false">\\x44</string> <!-- Keyboard F11 -->
+    <string name="KeyCode12" translatable="false">44</string> <!-- Keyboard F11 -->
     <string name="KeyText13" translatable="false">F12</string>
-    <string name="KeyCode13" translatable="false">\\x45</string> <!-- Keyboard F12 -->
+    <string name="KeyCode13" translatable="false">45</string> <!-- Keyboard F12 -->
     <string name="KeyText14" translatable="false">`&#160;&#160;~</string>
-    <string name="KeyCode14" translatable="false">\\x35</string> <!-- Keyboard ` and ~ -->
+    <string name="KeyCode14" translatable="false">35</string> <!-- Keyboard ` and ~ -->
     <string name="KeyText15" translatable="false">1&#160;&#160;!</string>
-    <string name="KeyCode15" translatable="false">\\x1e</string> <!-- Keyboard 1 and ! -->
+    <string name="KeyCode15" translatable="false">1e</string> <!-- Keyboard 1 and ! -->
     <string name="KeyText16" translatable="false">2&#160;&#160;@</string>
-    <string name="KeyCode16" translatable="false">\\x1f</string> <!-- Keyboard 2 and @ -->
+    <string name="KeyCode16" translatable="false">1f</string> <!-- Keyboard 2 and @ -->
     <string name="KeyText17" translatable="false">3&#160;&#160;#</string>
-    <string name="KeyCode17" translatable="false">\\x20</string> <!-- Keyboard 3 and # -->
+    <string name="KeyCode17" translatable="false">20</string> <!-- Keyboard 3 and # -->
     <string name="KeyText18" translatable="false">4&#160;&#160;$</string>
-    <string name="KeyCode18" translatable="false">\\x21</string> <!-- Keyboard 4 and $ -->
+    <string name="KeyCode18" translatable="false">21</string> <!-- Keyboard 4 and $ -->
     <string name="KeyText19" translatable="false">5&#160;&#160;%</string>
-    <string name="KeyCode19" translatable="false">\\x22</string> <!-- Keyboard 5 and % -->
+    <string name="KeyCode19" translatable="false">22</string> <!-- Keyboard 5 and % -->
     <string name="KeyText20" translatable="false">6&#160;&#160;^</string>
-    <string name="KeyCode20" translatable="false">\\x23</string> <!-- Keyboard 6 and ^ -->
+    <string name="KeyCode20" translatable="false">23</string> <!-- Keyboard 6 and ^ -->
     <string name="KeyText21" translatable="false">7&#160;&#160;&amp;</string>
-    <string name="KeyCode21" translatable="false">\\x24</string> <!-- Keyboard 7 and & -->
+    <string name="KeyCode21" translatable="false">24</string> <!-- Keyboard 7 and & -->
     <string name="KeyText22" translatable="false">8&#160;&#160;*</string>
-    <string name="KeyCode22" translatable="false">\\x25</string> <!-- Keyboard 8 and * -->
+    <string name="KeyCode22" translatable="false">25</string> <!-- Keyboard 8 and * -->
     <string name="KeyText23" translatable="false">9&#160;&#160;(</string>
-    <string name="KeyCode23" translatable="false">\\x26</string> <!-- Keyboard 9 and ( -->
+    <string name="KeyCode23" translatable="false">26</string> <!-- Keyboard 9 and ( -->
     <string name="KeyText24" translatable="false">0&#160;&#160;)</string>
-    <string name="KeyCode24" translatable="false">\\x27</string> <!-- Keyboard 0 and ) -->
+    <string name="KeyCode24" translatable="false">27</string> <!-- Keyboard 0 and ) -->
     <string name="KeyText25" translatable="false">-&#160;&#160;_</string>
-    <string name="KeyCode25" translatable="false">\\x2d</string> <!-- Keyboard - and _ -->
+    <string name="KeyCode25" translatable="false">2d</string> <!-- Keyboard - and _ -->
     <string name="KeyText26" translatable="false">=&#160;&#160;+</string>
-    <string name="KeyCode26" translatable="false">\\x2e</string> <!-- Keyboard = and + -->
+    <string name="KeyCode26" translatable="false">2e</string> <!-- Keyboard = and + -->
     <string name="KeyText27" translatable="false">Backspace</string>
-    <string name="KeyCode27" translatable="false">\\x2a</string> <!-- Keyboard DELETE (Backspace) -->
+    <string name="KeyCode27" translatable="false">2a</string> <!-- Keyboard DELETE (Backspace) -->
     <string name="KeyText28" translatable="false">Tab</string>
-    <string name="KeyCode28" translatable="false">\\x2b</string> <!-- Keyboard Tab -->
+    <string name="KeyCode28" translatable="false">2b</string> <!-- Keyboard Tab -->
     <string name="KeyText29" translatable="false">Q</string>
-    <string name="KeyCode29" translatable="false">\\x14</string> <!-- Keyboard q and Q -->
+    <string name="KeyCode29" translatable="false">14</string> <!-- Keyboard q and Q -->
     <string name="KeyText30" translatable="false">W</string>
-    <string name="KeyCode30" translatable="false">\\x1a</string> <!-- Keyboard w and W -->
+    <string name="KeyCode30" translatable="false">1a</string> <!-- Keyboard w and W -->
     <string name="KeyText31" translatable="false">E</string>
-    <string name="KeyCode31" translatable="false">\\x08</string> <!-- Keyboard e and E -->
+    <string name="KeyCode31" translatable="false">08</string> <!-- Keyboard e and E -->
     <string name="KeyText32" translatable="false">R</string>
-    <string name="KeyCode32" translatable="false">\\x15</string> <!-- Keyboard r and R -->
+    <string name="KeyCode32" translatable="false">15</string> <!-- Keyboard r and R -->
     <string name="KeyText33" translatable="false">T</string>
-    <string name="KeyCode33" translatable="false">\\x17</string> <!-- Keyboard t and T -->
+    <string name="KeyCode33" translatable="false">17</string> <!-- Keyboard t and T -->
     <string name="KeyText34" translatable="false">Y</string>
-    <string name="KeyCode34" translatable="false">\\x1c</string> <!-- Keyboard y and Y -->
+    <string name="KeyCode34" translatable="false">1c</string> <!-- Keyboard y and Y -->
     <string name="KeyText35" translatable="false">U</string>
-    <string name="KeyCode35" translatable="false">\\x18</string> <!-- Keyboard u and U -->
+    <string name="KeyCode35" translatable="false">18</string> <!-- Keyboard u and U -->
     <string name="KeyText36" translatable="false">I</string>
-    <string name="KeyCode36" translatable="false">\\x0c</string> <!-- Keyboard i and I -->
+    <string name="KeyCode36" translatable="false">0c</string> <!-- Keyboard i and I -->
     <string name="KeyText37" translatable="false">O</string>
-    <string name="KeyCode37" translatable="false">\\x12</string> <!-- Keyboard o and O -->
+    <string name="KeyCode37" translatable="false">12</string> <!-- Keyboard o and O -->
     <string name="KeyText38" translatable="false">P</string>
-    <string name="KeyCode38" translatable="false">\\x13</string> <!-- Keyboard p and P -->
+    <string name="KeyCode38" translatable="false">13</string> <!-- Keyboard p and P -->
     <string name="KeyText39" translatable="false">[&#160;&#160;{</string>
-    <string name="KeyCode39" translatable="false">\\x2f</string> <!-- Keyboard [ and { -->
+    <string name="KeyCode39" translatable="false">2f</string> <!-- Keyboard [ and { -->
     <string name="KeyText40" translatable="false">]&#160;&#160;}</string>
-    <string name="KeyCode40" translatable="false">\\x30</string> <!-- Keyboard ] and } -->
+    <string name="KeyCode40" translatable="false">30</string> <!-- Keyboard ] and } -->
     <string name="KeyText41" translatable="false">\\&#160;&#160;|</string>
-    <string name="KeyCode41" translatable="false">\\x31</string> <!-- Keyboard \ and | -->
+    <string name="KeyCode41" translatable="false">31</string> <!-- Keyboard \ and | -->
     <string name="KeyText42" translatable="false">CapsLock</string>
-    <string name="KeyCode42" translatable="false">\\x39</string> <!-- Keyboard Caps Lock -->
+    <string name="KeyCode42" translatable="false">39</string> <!-- Keyboard Caps Lock -->
     <string name="KeyText43" translatable="false">A</string>
-    <string name="KeyCode43" translatable="false">\\x04</string> <!-- Keyboard a and A -->
+    <string name="KeyCode43" translatable="false">04</string> <!-- Keyboard a and A -->
     <string name="KeyText44" translatable="false">S</string>
-    <string name="KeyCode44" translatable="false">\\x16</string> <!-- Keyboard s and S -->
+    <string name="KeyCode44" translatable="false">16</string> <!-- Keyboard s and S -->
     <string name="KeyText45" translatable="false">D</string>
-    <string name="KeyCode45" translatable="false">\\x07</string> <!-- Keyboard d and D -->
+    <string name="KeyCode45" translatable="false">07</string> <!-- Keyboard d and D -->
     <string name="KeyText46" translatable="false">F</string>
-    <string name="KeyCode46" translatable="false">\\x09</string> <!-- Keyboard f and F -->
+    <string name="KeyCode46" translatable="false">09</string> <!-- Keyboard f and F -->
     <string name="KeyText47" translatable="false">G</string>
-    <string name="KeyCode47" translatable="false">\\x0a</string> <!-- Keyboard g and G -->
+    <string name="KeyCode47" translatable="false">0a</string> <!-- Keyboard g and G -->
     <string name="KeyText48" translatable="false">H</string>
-    <string name="KeyCode48" translatable="false">\\x0b</string> <!-- Keyboard h and H -->
+    <string name="KeyCode48" translatable="false">0b</string> <!-- Keyboard h and H -->
     <string name="KeyText49" translatable="false">J</string>
-    <string name="KeyCode49" translatable="false">\\x0d</string> <!-- Keyboard j and J -->
+    <string name="KeyCode49" translatable="false">0d</string> <!-- Keyboard j and J -->
     <string name="KeyText50" translatable="false">K</string>
-    <string name="KeyCode50" translatable="false">\\x0e</string> <!-- Keyboard k and K -->
+    <string name="KeyCode50" translatable="false">0e</string> <!-- Keyboard k and K -->
     <string name="KeyText51" translatable="false">L</string>
-    <string name="KeyCode51" translatable="false">\\x0f</string> <!-- Keyboard l and L -->
+    <string name="KeyCode51" translatable="false">0f</string> <!-- Keyboard l and L -->
     <string name="KeyText52" translatable="false">;&#160;&#160;:</string>
-    <string name="KeyCode52" translatable="false">\\x33</string> <!-- Keyboard ; and : -->
+    <string name="KeyCode52" translatable="false">33</string> <!-- Keyboard ; and : -->
     <string name="KeyText53" translatable="false">\'&#160;&#160;\"</string>
-    <string name="KeyCode53" translatable="false">\\x34</string> <!-- Keyboard ' and " -->
+    <string name="KeyCode53" translatable="false">34</string> <!-- Keyboard ' and " -->
     <string name="KeyText54" translatable="false">Enter</string>
-    <string name="KeyCode54" translatable="false">\\x28</string> <!-- Keyboard Return (ENTER) -->
+    <string name="KeyCode54" translatable="false">28</string> <!-- Keyboard Return (ENTER) -->
     <string name="KeyText55" translatable="false">Shift</string>
-    <string name="KeyCode55" translatable="false">\\x02</string> <!-- Keyboard Left Shift -->
+    <string name="KeyCode55" translatable="false">02</string> <!-- Keyboard Left Shift -->
     <string name="KeyText56" translatable="false">Z</string>
-    <string name="KeyCode56" translatable="false">\\x1d</string> <!-- Keyboard z and Z -->
+    <string name="KeyCode56" translatable="false">1d</string> <!-- Keyboard z and Z -->
     <string name="KeyText57" translatable="false">X</string>
-    <string name="KeyCode57" translatable="false">\\x1b</string> <!-- Keyboard x and X -->
+    <string name="KeyCode57" translatable="false">1b</string> <!-- Keyboard x and X -->
     <string name="KeyText58" translatable="false">C</string>
-    <string name="KeyCode58" translatable="false">\\x06</string> <!-- Keyboard c and C -->
+    <string name="KeyCode58" translatable="false">06</string> <!-- Keyboard c and C -->
     <string name="KeyText59" translatable="false">V</string>
-    <string name="KeyCode59" translatable="false">\\x19</string> <!-- Keyboard v and V -->
+    <string name="KeyCode59" translatable="false">19</string> <!-- Keyboard v and V -->
     <string name="KeyText60" translatable="false">B</string>
-    <string name="KeyCode60" translatable="false">\\x05</string> <!-- Keyboard b and B -->
+    <string name="KeyCode60" translatable="false">05</string> <!-- Keyboard b and B -->
     <string name="KeyText61" translatable="false">N</string>
-    <string name="KeyCode61" translatable="false">\\x11</string> <!-- Keyboard n and N -->
+    <string name="KeyCode61" translatable="false">11</string> <!-- Keyboard n and N -->
     <string name="KeyText62" translatable="false">M</string>
-    <string name="KeyCode62" translatable="false">\\x10</string> <!-- Keyboard m and M -->
+    <string name="KeyCode62" translatable="false">10</string> <!-- Keyboard m and M -->
     <string name="KeyText63" translatable="false">,&#160;&#160;&lt;</string>
-    <string name="KeyCode63" translatable="false">\\x36</string> <!-- Keyboard , and < -->
+    <string name="KeyCode63" translatable="false">36</string> <!-- Keyboard , and < -->
     <string name="KeyText64" translatable="false">.&#160;&#160;&gt;</string>
-    <string name="KeyCode64" translatable="false">\\x37</string> <!-- Keyboard . and > -->
+    <string name="KeyCode64" translatable="false">37</string> <!-- Keyboard . and > -->
     <string name="KeyText65" translatable="false">/&#160;&#160;?</string>
-    <string name="KeyCode65" translatable="false">\\x38</string> <!-- Keyboard / and ? -->
+    <string name="KeyCode65" translatable="false">38</string> <!-- Keyboard / and ? -->
     <string name="KeyText66" translatable="false">Shift</string>
-    <string name="KeyCode66" translatable="false">\\x20</string> <!-- Keyboard Right Shift -->
+    <string name="KeyCode66" translatable="false">20</string> <!-- Keyboard Right Shift -->
     <string name="KeyText67" translatable="false">Ctrl</string>
-    <string name="KeyCode67" translatable="false">\\x01</string> <!-- Keyboard Left Ctrl -->
+    <string name="KeyCode67" translatable="false">01</string> <!-- Keyboard Left Ctrl -->
     <string name="KeyText68" translatable="false">⊞</string>
-    <string name="KeyCode68" translatable="false">\\x08</string> <!-- Keyboard Left Win -->
+    <string name="KeyCode68" translatable="false">08</string> <!-- Keyboard Left Win -->
     <string name="KeyText69" translatable="false">Alt</string>
-    <string name="KeyCode69" translatable="false">\\x04</string> <!-- Keyboard Left Alt -->
+    <string name="KeyCode69" translatable="false">04</string> <!-- Keyboard Left Alt -->
     <string name="KeyText70" translatable="false">SPACE</string>
-    <string name="KeyCode70" translatable="false">\\x2c</string> <!-- Keyboard Space -->
+    <string name="KeyCode70" translatable="false">2c</string> <!-- Keyboard Space -->
     <string name="KeyText71" translatable="false">Alt</string>
-    <string name="KeyCode71" translatable="false">\\x40</string> <!-- Keyboard Right Alt -->
+    <string name="KeyCode71" translatable="false">40</string> <!-- Keyboard Right Alt -->
     <string name="KeyText72" translatable="false">Win</string>
-    <string name="KeyCode72" translatable="false">\\x80</string> <!-- Keyboard Right Win -->
+    <string name="KeyCode72" translatable="false">80</string> <!-- Keyboard Right Win -->
     <string name="KeyText73" translatable="false">☰</string>
-    <string name="KeyCode73" translatable="false">\\x65</string> <!-- Keyboard Application -->
+    <string name="KeyCode73" translatable="false">65</string> <!-- Keyboard Application -->
     <string name="KeyText74" translatable="false">Ctrl</string>
-    <string name="KeyCode74" translatable="false">\\x10</string> <!-- Keyboard Right Ctrl -->
+    <string name="KeyCode74" translatable="false">10</string> <!-- Keyboard Right Ctrl -->
     <string name="KeyText75" translatable="false">Print Screen</string>
-    <string name="KeyCode75" translatable="false">\\x46</string> <!-- Keyboard Print Screen -->
+    <string name="KeyCode75" translatable="false">46</string> <!-- Keyboard Print Screen -->
     <string name="KeyText76" translatable="false">Scroll Lock</string>
-    <string name="KeyCode76" translatable="false">\\x47</string> <!-- Keyboard Scroll Lock -->
+    <string name="KeyCode76" translatable="false">47</string> <!-- Keyboard Scroll Lock -->
     <string name="KeyText77" translatable="false">PAUSE</string>
-    <string name="KeyCode77" translatable="false">\\x48</string> <!-- Keyboard Pause -->
+    <string name="KeyCode77" translatable="false">48</string> <!-- Keyboard Pause -->
     <string name="KeyText78" translatable="false">Insert</string>
-    <string name="KeyCode78" translatable="false">\\x49</string> <!-- Keyboard Insert -->
+    <string name="KeyCode78" translatable="false">49</string> <!-- Keyboard Insert -->
     <string name="KeyText79" translatable="false">Home</string>
-    <string name="KeyCode79" translatable="false">\\x4a</string> <!-- Keyboard Home -->
+    <string name="KeyCode79" translatable="false">4a</string> <!-- Keyboard Home -->
     <string name="KeyText80" translatable="false">PgUp</string>
-    <string name="KeyCode80" translatable="false">\\x4b</string> <!-- Keyboard Page Up -->
+    <string name="KeyCode80" translatable="false">4b</string> <!-- Keyboard Page Up -->
     <string name="KeyText81" translatable="false">Delete</string>
-    <string name="KeyCode81" translatable="false">\\x4c</string> <!-- Keyboard Delete Forward -->
+    <string name="KeyCode81" translatable="false">4c</string> <!-- Keyboard Delete Forward -->
     <string name="KeyText82" translatable="false">End</string>
-    <string name="KeyCode82" translatable="false">\\x4d</string> <!-- Keyboard End -->
+    <string name="KeyCode82" translatable="false">4d</string> <!-- Keyboard End -->
     <string name="KeyText83" translatable="false">PgDn</string>
-    <string name="KeyCode83" translatable="false">\\x4e</string> <!-- Keyboard Page Down -->
+    <string name="KeyCode83" translatable="false">4e</string> <!-- Keyboard Page Down -->
     <string name="KeyText84" translatable="false">▲</string>
-    <string name="KeyCode84" translatable="false">\\x52</string> <!-- Keyboard Up Arrow -->
+    <string name="KeyCode84" translatable="false">52</string> <!-- Keyboard Up Arrow -->
     <string name="KeyText85" translatable="false">◀</string>
-    <string name="KeyCode85" translatable="false">\\x50</string> <!-- Keyboard Left Arrow -->
+    <string name="KeyCode85" translatable="false">50</string> <!-- Keyboard Left Arrow -->
     <string name="KeyText86" translatable="false">▼</string>
-    <string name="KeyCode86" translatable="false">\\x51</string> <!-- Keyboard Down Arrow -->
+    <string name="KeyCode86" translatable="false">51</string> <!-- Keyboard Down Arrow -->
     <string name="KeyText87" translatable="false">▶</string>
-    <string name="KeyCode87" translatable="false">\\x4f</string> <!-- Keyboard Right Arrow -->
+    <string name="KeyCode87" translatable="false">4f</string> <!-- Keyboard Right Arrow -->
 
     <string name="KeyTextFn" translatable="false">Fn</string>
     <string name="msg_e_root">Check root permission failed.</string>
