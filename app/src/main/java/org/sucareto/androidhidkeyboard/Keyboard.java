@@ -22,8 +22,9 @@ import java.io.OutputStream;
 
 
 public class Keyboard extends AppCompatActivity {
-    byte[] keycode;
-    OutputStream HidStream;
+    private byte[] keycode;
+    private OutputStream HidStream = null;
+    private boolean FnEnable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class Keyboard extends AppCompatActivity {
             Toast.makeText(this, R.string.msg_e_root, Toast.LENGTH_LONG).show();
             return;
         }
-        if (!SuFile.open("/config/usb_gadget/keyboard/").exists() && !SuFile.open("/dev/hidg0").exists()) {
+        if (!SuFile.open("/config/usb_gadget/keyboard/functions/hid.keyboard/").exists() | !SuFile.open("/dev/hidg0").exists()) {
             Toast.makeText(this, R.string.msg_e_hid, Toast.LENGTH_LONG).show();
             return;
         }
@@ -93,7 +94,7 @@ public class Keyboard extends AppCompatActivity {
         }
     }
 
-    class CtrlKeyOnTouch implements View.OnTouchListener {
+    private class CtrlKeyOnTouch implements View.OnTouchListener {
 
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -121,7 +122,7 @@ public class Keyboard extends AppCompatActivity {
         }
     }
 
-    class KeyOnTouch implements View.OnTouchListener {
+    private class KeyOnTouch implements View.OnTouchListener {
 
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -159,11 +160,10 @@ public class Keyboard extends AppCompatActivity {
         }
     }
 
-    class FnKeyOnTouch implements View.OnTouchListener {
+    private class FnKeyOnTouch implements View.OnTouchListener {
 
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
-            boolean FnEnable;
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
