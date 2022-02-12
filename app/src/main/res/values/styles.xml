@@ -9,6 +9,20 @@
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
+    <style name="KeyboardLinearLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="KeyboardLinearLayout_F">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
     <style name="DefaultButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">fill_parent</item>
