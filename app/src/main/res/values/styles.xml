@@ -1,14 +1,5 @@
 <resources>
 
-    <style name="Widget.Theme.AndroidHIDKeyboard.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-
-    <style name="Widget.Theme.AndroidHIDKeyboard.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
-
     <style name="KeyboardLinearLayout">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
@@ -25,7 +16,7 @@
 
     <style name="DefaultButton">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginHorizontal">2dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:insetLeft">0dp</item>
