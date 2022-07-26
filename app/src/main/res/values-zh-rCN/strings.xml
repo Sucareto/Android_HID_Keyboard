@@ -2,4 +2,12 @@
     <string name="app_name">HID键盘</string>
     <string name="msg_e_root">获取 root 权限失败。</string>
     <string name="msg_e_hid">未开启 HID 功能？</string>
+    <string name="FnSpace">鼠标模式</string>
+    <string name="touch_area">触摸区域</string>
+    <string name="scroll_area">滚动区域</string>
+    <string name="MouseLeftKey">左键</string>
+    <string name="MouseRightKey">右键</string>
+    <string name="MouseMiddleKey">中键</string>
+    <string name="tvMoveSpeed">鼠标移动速度</string>
+    <string name="BtnBackText">返回</string>
 </resources>

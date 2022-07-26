@@ -176,6 +176,21 @@
     <string name="KeyCode87" translatable="false">4f</string> <!-- Keyboard Right Arrow -->
 
     <string name="KeyTextFn" translatable="false">Fn</string>
+    <string name="FnSpace">Mouse mode</string>
+    <string name="FnEnter" translatable="false">Ctrl + Alt + Del</string>
+
+    <string name="MouseLeftKeyCode" translatable="false">1</string>
+    <string name="MouseRightKeyCode" translatable="false">2</string>
+    <string name="MouseMiddleKeyCode" translatable="false">4</string>
+
     <string name="msg_e_root">Check root permission failed.</string>
     <string name="msg_e_hid">HID function not turned on?</string>
+    <string name="touch_area">Touch Area</string>
+    <string name="scroll_area">Scroll Area</string>
+    <string name="MouseLeftKey">Left</string>
+    <string name="MouseRightKey">Right</string>
+    <string name="MouseMiddleKey">Middle</string>
+    <string name="tvMoveSpeed">Mouse Move Speed</string>
+
+    <string name="BtnBackText">Back</string>
 </resources>
