@@ -1,10 +1,9 @@
 package org.sucareto.androidhidkeyboard;
 
-import android.app.Service;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.util.Log;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -22,50 +21,85 @@ import java.io.OutputStream;
 
 
 public class Keyboard extends AppCompatActivity {
-    private byte[] keycode;
+    private byte[] keycode = null;
     private OutputStream HidStream = null;
     private boolean FnEnable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityKeyboardBinding binding = ActivityKeyboardBinding.inflate(getLayoutInflater());
-        binding.getRoot().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
+        View root_view = ActivityKeyboardBinding.inflate(getLayoutInflater()).getRoot();
+        root_view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-        setContentView(binding.getRoot());
+        setContentView(root_view);
         if (!Shell.getShell().isRoot()) {
             Toast.makeText(this, R.string.msg_e_root, Toast.LENGTH_LONG).show();
             return;
         }
-        if (!SuFile.open("/config/usb_gadget/keyboard/functions/hid.keyboard/").exists() | !SuFile.open("/dev/hidg0").exists()) {
+        if (!SuFile.open("/dev/hidg0").exists()) {
             Toast.makeText(this, R.string.msg_e_hid, Toast.LENGTH_LONG).show();
             return;
         }
 
-        //TODO 使用其他初始化方式，解决id变动的问题
-        findViewById(R.id.fn).setOnTouchListener(new FnKeyOnTouch());
+        findViewById(R.id.BtnSpace).setOnTouchListener(new SpaceOnTouch());
+        findViewById(R.id.BtnEnter).setOnTouchListener(new EnterOnTouch());
+        findViewById(R.id.BtnFn).setOnTouchListener(new FnKeyOnTouch());
+
+        String packageName = getPackageName();
+
         KeyOnTouch keyOnTouch = new KeyOnTouch();
         for (int i = 1; i < 72; i++) {
-            try {
-                findViewById(getResources().getIdentifier("Btn" + i, "id",
-                        getPackageName())).setOnTouchListener(keyOnTouch);
-            } catch (Exception e) {
-                Log.e("setKeyOnTouch", "在" + i + "的时候：" + e);
+            int resId = getResources().getIdentifier("Btn" + i, "id", packageName);
+            if (resId != 0) {
+                findViewById(resId).setOnTouchListener(keyOnTouch);
             }
-
         }
         CtrlKeyOnTouch ctrlKeyOnTouch = new CtrlKeyOnTouch();
         for (int i = 1; i < 6; i++) {
-            try {
-                findViewById(getResources().getIdentifier("CtrlBtn" + i, "id",
-                        getPackageName())).setOnTouchListener(ctrlKeyOnTouch);
-            } catch (Exception e) {
-                Log.e("setCtrlKeyOnTouch", "在" + i + "的时候：" + e);
+            int resId = getResources().getIdentifier("CtrlBtn" + i, "id", packageName);
+            if (resId != 0) {
+                findViewById(resId).setOnTouchListener(ctrlKeyOnTouch);
             }
+        }
+    }
+
+    void SendKeyCode(SendKeyMode mode, byte code) {
+        switch (mode) {
+            case Ctrl_Add:
+                keycode[0] += code;
+                break;
+            case Ctrl_Del:
+                keycode[0] -= code;
+                break;
+            case Key_Add:
+                for (byte i = 2; i < 8; i++) {
+                    if (keycode[i] == 0) {
+                        keycode[i] = code;
+                        break;
+                    }
+                }
+                break;
+            case Key_Del:
+                for (byte i = 2; i < 8; i++) {
+                    if (keycode[i] == code) {
+                        keycode[i] = 0;
+                        break;
+                    }
+                }
+                break;
+            case Send_Only:
+                break;
+            default:
+                return;
+        }
+        try {
+            HidStream.write(keycode);
+        } catch (Exception e) {
+            Log.e("SendKeyCode", String.valueOf(e));
         }
     }
 
@@ -76,103 +110,131 @@ public class Keyboard extends AppCompatActivity {
             HidStream.write(new byte[]{0, 0, 0, 0, 0, 0, 0, 0});
             HidStream.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("onStop", String.valueOf(e));
         }
 
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();
-        keycode = new byte[8];
+        keycode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
         try {
             HidStream = SuFileOutputStream.open(SuFile.open("/dev/hidg0"));
+            HidStream.write(new byte[]{0, 0, 0, 0, 0, 0, 0, 0});
         } catch (Exception e) {
             Toast.makeText(this, "hid设备文件打开失败", Toast.LENGTH_LONG).show();
             Log.e("onStart", String.valueOf(e));
         }
     }
 
-    private class CtrlKeyOnTouch implements View.OnTouchListener {
 
+    enum SendKeyMode {
+        Ctrl_Add,
+        Ctrl_Del,
+        Key_Add,
+        Key_Del,
+        Send_Only,
+    }
+
+    private class SpaceOnTouch implements View.OnTouchListener {
+        @SuppressLint("ClickableViewAccessibility")
         @Override
-        public boolean onTouch(View view, MotionEvent motionEvent) {
-            switch (motionEvent.getAction()) {
+        public boolean onTouch(View v, MotionEvent e) {
+            switch (e.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
-                    keycode[0] += Integer.parseInt(view.getTag().toString(), 16);
-                    Log.e("CtrlKeyOnTouch", "按下控制键：" + keycode[0]);
+                    v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
+                    if (FnEnable) {
+//                        startActivity(new Intent(Keyboard.this, Mouse.class));
+                        break;
+                    }
+                    SendKeyCode(SendKeyMode.Key_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    keycode[0] -= Integer.parseInt(view.getTag().toString(), 16);
-                    view.performClick();
-                    Log.e("CtrlKeyOnTouch", "松开控制键：" + keycode[0]);
+                    SendKeyCode(SendKeyMode.Key_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
-                default:
-                    return false;
             }
-            try {
-                HidStream.write(keycode);
-            } catch (Exception e) {
-                Log.e("CtrlKeyOnTouch", String.valueOf(e));
+            return false;
+        }
+    }
+
+    private class EnterOnTouch implements View.OnTouchListener {
+        @SuppressLint("ClickableViewAccessibility")
+        @Override
+        public boolean onTouch(View v, MotionEvent e) {
+            switch (e.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
+                    if (FnEnable) {
+                        keycode = new byte[]{0x05, 0, 0x4c, 0, 0, 0, 0, 0};
+                        SendKeyCode(SendKeyMode.Send_Only, (byte) 0);
+                    } else {
+                        SendKeyCode(SendKeyMode.Key_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    }
+                    break;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL:
+                    if (FnEnable) {
+                        keycode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
+                        SendKeyCode(SendKeyMode.Send_Only, (byte) 0);
+                    } else {
+                        SendKeyCode(SendKeyMode.Key_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    }
+                    break;
+            }
+            return false;
+        }
+    }
+
+    private class CtrlKeyOnTouch implements View.OnTouchListener {
+        @SuppressLint("ClickableViewAccessibility")
+        @Override
+        public boolean onTouch(View v, MotionEvent e) {
+            switch (e.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
+                    SendKeyCode(SendKeyMode.Ctrl_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    break;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL:
+                    SendKeyCode(SendKeyMode.Ctrl_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    break;
             }
             return false;
         }
     }
 
     private class KeyOnTouch implements View.OnTouchListener {
-
+        @SuppressLint("ClickableViewAccessibility")
         @Override
-        public boolean onTouch(View view, MotionEvent motionEvent) {
-            switch (motionEvent.getAction()) {
+        public boolean onTouch(View v, MotionEvent e) {
+            switch (e.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
-                    for (int i = 2; i < 8; i++) {
-                        if (keycode[i] == 0) {
-                            keycode[i] = (byte) Integer.parseInt(view.getTag().toString(), 16);
-                            break;
-                        }
-                    }
-                    Log.e("KeyOnTouch", "按下" + view.getTag());
+                    v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
+                    SendKeyCode(SendKeyMode.Key_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    int code = Integer.parseInt(view.getTag().toString(), 16);
-                    for (int i = 2; i < 8; i++) {
-                        if (keycode[i] == code) {
-                            keycode[i] = 0;
-                        }
-                    }
-                    view.performClick();
-                    Log.e("KeyOnTouch", "松开" + view.getTag());
+                    SendKeyCode(SendKeyMode.Key_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
-                default:
-                    return false;
-            }
-            try {
-                HidStream.write(keycode);
-            } catch (Exception e) {
-                Log.e("CtrlKeyOnTouch", String.valueOf(e));
             }
             return false;
         }
     }
 
     private class FnKeyOnTouch implements View.OnTouchListener {
-
+        @SuppressLint("ClickableViewAccessibility")
         @Override
-        public boolean onTouch(View view, MotionEvent motionEvent) {
-            switch (motionEvent.getAction()) {
+        public boolean onTouch(View v, MotionEvent e) {
+            switch (e.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    ((Vibrator) getSystemService(Service.VIBRATOR_SERVICE)).vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK));
+                    v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     FnEnable = true;
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
                     FnEnable = false;
-                    view.performClick();
                     break;
                 default:
                     return false;
@@ -194,6 +256,9 @@ public class Keyboard extends AppCompatActivity {
 
             ((Button) findViewById(R.id.Btn71)).setText(getResources().getString(FnEnable ? R.string.KeyText82 : R.string.KeyText87));//Right,End
             findViewById(R.id.Btn71).setTag(getResources().getString(FnEnable ? R.string.KeyCode82 : R.string.KeyCode87));
+
+            ((Button) findViewById(R.id.BtnSpace)).setText(getResources().getString(FnEnable ? R.string.FnSpace : R.string.KeyText70));//Space
+            ((Button) findViewById(R.id.BtnEnter)).setText(getResources().getString(FnEnable ? R.string.FnEnter : R.string.KeyText54));//Enter
             return false;
         }
     }

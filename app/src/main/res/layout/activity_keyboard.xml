@@ -449,7 +449,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/Btn54"
+            android:id="@+id/BtnEnter"
             style="@style/DefaultButton"
             android:layout_weight="2.25"
             android:tag="@string/KeyCode54"
@@ -584,7 +584,7 @@
             android:text="@string/KeyText67" />
 
         <Button
-            android:id="@+id/fn"
+            android:id="@+id/BtnFn"
             style="@style/DefaultButton"
             android:text="@string/KeyTextFn" />
 
@@ -601,7 +601,7 @@
             android:text="@string/KeyText69" />
 
         <Button
-            android:id="@+id/Btn67"
+            android:id="@+id/BtnSpace"
             style="@style/DefaultButton"
             android:layout_weight="6"
             android:tag="@string/KeyCode70"
