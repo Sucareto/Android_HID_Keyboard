@@ -3,7 +3,6 @@
     package="org.sucareto.androidhidkeyboard">
 
     <application
-        android:configChanges="orientation|keyboardHidden|screenSize"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -11,13 +10,21 @@
         android:theme="@style/Theme.AndroidHIDKeyboard">
         <activity
             android:name=".Keyboard"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
+            android:launchMode="singleTask"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Mouse"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape" />
     </application>
 
 </manifest>

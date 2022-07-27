@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mouse_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mouse">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mouse_gl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gl_20"
+        app:layout_constraintEnd_toEndOf="@id/mouse_gl_scroll"
+        app:layout_constraintStart_toStartOf="@id/mouse_gl_left"
+        app:layout_constraintTop_toTopOf="@id/mouse_gl_top">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scroll_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8sp"
+        android:background="@drawable/touch_area_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/mouse_gl_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/mouse_gl_scroll"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_left"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mouse_gl_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mouse_gl_touch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+
+    <LinearLayout
+        android:id="@+id/touch_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8sp"
+        android:background="@drawable/touch_area_border"
+        android:orientation="horizontal"
+        android:padding="120sp"
+        app:layout_constraintBottom_toTopOf="@+id/mouse_gl_bottom"
+        app:layout_constraintEnd_toEndOf="@id/mouse_gl_right"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_touch"
+        app:layout_constraintTop_toTopOf="@+id/mouse_gl_top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/touch_area"
+            app:srcCompat="@drawable/touch_area_icon" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mouse_gl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mouse_gl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_40"
+        app:layout_constraintEnd_toStartOf="@+id/mouse_gl_touch"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_scroll"
+        app:layout_constraintTop_toTopOf="@+id/gl_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tvMoveSpeed"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/sbMouseMoveSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:max="7"
+            android:min="1"
+            android:progress="2" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_20"
+        app:layout_constraintEnd_toStartOf="@+id/mouse_gl_touch"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_scroll"
+        app:layout_constraintTop_toTopOf="@+id/mouse_gl_top">
+
+        <Button
+            android:id="@+id/BtnBack"
+            style="@style/MouseActKey"
+            android:backgroundTint="#304FFE"
+            android:text="@string/BtnBackText" />
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_60"
+        app:layout_constraintEnd_toStartOf="@+id/mouse_gl_touch"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_scroll"
+        app:layout_constraintTop_toTopOf="@+id/gl_40">
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/mBtn1"
+            style="@style/MouseActKey"
+            android:tag="@string/KeyCode80"
+            android:text="@string/KeyText80" />
+
+        <Button
+            android:id="@+id/mBtn2"
+            style="@style/MouseActKey"
+            android:tag="@string/KeyCode84"
+            android:text="@string/KeyText84"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/mBtn3"
+            style="@style/MouseActKey"
+            android:tag="@string/KeyCode83"
+            android:text="@string/KeyText83" />
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_80"
+        app:layout_constraintEnd_toStartOf="@+id/mouse_gl_touch"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_scroll"
+        app:layout_constraintTop_toTopOf="@+id/gl_60">
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/mBtn4"
+            style="@style/MouseActKey"
+            android:tag="@string/KeyCode85"
+            android:text="@string/KeyText85"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/mBtn5"
+            style="@style/MouseActKey"
+            android:tag="@string/KeyCode86"
+            android:text="@string/KeyText86"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/mBtn6"
+            style="@style/MouseActKey"
+            android:tag="@string/KeyCode87"
+            android:text="@string/KeyText87"
+            android:textSize="14sp" />
+
+        <Button
+            style="@style/MouseActKey"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/mouse_gl_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/mouse_gl_touch"
+        app:layout_constraintStart_toStartOf="@+id/mouse_gl_scroll"
+        app:layout_constraintTop_toTopOf="@+id/gl_80">
+
+        <Button
+            android:id="@+id/mouse_left"
+            style="@style/DefaultButton"
+            android:layout_marginHorizontal="10sp"
+            android:layout_weight="1"
+            android:tag="@string/MouseLeftKeyCode"
+            android:text="@string/MouseLeftKey" />
+
+        <Button
+            android:id="@+id/mouse_middle"
+            style="@style/DefaultButton"
+            android:layout_marginHorizontal="10sp"
+            android:layout_weight="0.5"
+            android:tag="@string/MouseMiddleKeyCode"
+            android:text="@string/MouseMiddleKey" />
+
+        <Button
+            android:id="@+id/mouse_right"
+            style="@style/DefaultButton"
+            android:layout_marginHorizontal="10sp"
+            android:layout_weight="1"
+            android:tag="@string/MouseRightKeyCode"
+            android:text="@string/MouseRightKey" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mouse_gl_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

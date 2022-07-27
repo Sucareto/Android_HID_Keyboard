@@ -1,8 +1,8 @@
 package org.sucareto.androidhidkeyboard;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,18 +11,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.topjohnwu.superuser.Shell;
-import com.topjohnwu.superuser.io.SuFile;
-import com.topjohnwu.superuser.io.SuFileOutputStream;
-
 import org.sucareto.androidhidkeyboard.databinding.ActivityKeyboardBinding;
-
-import java.io.OutputStream;
 
 
 public class Keyboard extends AppCompatActivity {
-    private byte[] keycode = null;
-    private OutputStream HidStream = null;
+    HidController hid = new HidController();
     private boolean FnEnable = false;
 
     @Override
@@ -36,14 +29,6 @@ public class Keyboard extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(root_view);
-        if (!Shell.getShell().isRoot()) {
-            Toast.makeText(this, R.string.msg_e_root, Toast.LENGTH_LONG).show();
-            return;
-        }
-        if (!SuFile.open("/dev/hidg0").exists()) {
-            Toast.makeText(this, R.string.msg_e_hid, Toast.LENGTH_LONG).show();
-            return;
-        }
 
         findViewById(R.id.BtnSpace).setOnTouchListener(new SpaceOnTouch());
         findViewById(R.id.BtnEnter).setOnTouchListener(new EnterOnTouch());
@@ -67,74 +52,18 @@ public class Keyboard extends AppCompatActivity {
         }
     }
 
-    void SendKeyCode(SendKeyMode mode, byte code) {
-        switch (mode) {
-            case Ctrl_Add:
-                keycode[0] += code;
-                break;
-            case Ctrl_Del:
-                keycode[0] -= code;
-                break;
-            case Key_Add:
-                for (byte i = 2; i < 8; i++) {
-                    if (keycode[i] == 0) {
-                        keycode[i] = code;
-                        break;
-                    }
-                }
-                break;
-            case Key_Del:
-                for (byte i = 2; i < 8; i++) {
-                    if (keycode[i] == code) {
-                        keycode[i] = 0;
-                        break;
-                    }
-                }
-                break;
-            case Send_Only:
-                break;
-            default:
-                return;
-        }
-        try {
-            HidStream.write(keycode);
-        } catch (Exception e) {
-            Log.e("SendKeyCode", String.valueOf(e));
-        }
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
-        try {
-            HidStream.write(new byte[]{0, 0, 0, 0, 0, 0, 0, 0});
-            HidStream.close();
-        } catch (Exception e) {
-            Log.e("onStop", String.valueOf(e));
-        }
-
+        hid.UnInit();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        keycode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
-        try {
-            HidStream = SuFileOutputStream.open(SuFile.open("/dev/hidg0"));
-            HidStream.write(new byte[]{0, 0, 0, 0, 0, 0, 0, 0});
-        } catch (Exception e) {
+        if (hid.kInit()) {
             Toast.makeText(this, "hid设备文件打开失败", Toast.LENGTH_LONG).show();
-            Log.e("onStart", String.valueOf(e));
         }
-    }
-
-
-    enum SendKeyMode {
-        Ctrl_Add,
-        Ctrl_Del,
-        Key_Add,
-        Key_Del,
-        Send_Only,
     }
 
     private class SpaceOnTouch implements View.OnTouchListener {
@@ -145,14 +74,14 @@ public class Keyboard extends AppCompatActivity {
                 case MotionEvent.ACTION_DOWN:
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     if (FnEnable) {
-//                        startActivity(new Intent(Keyboard.this, Mouse.class));
+                        startActivity(new Intent(Keyboard.this, Mouse.class));
                         break;
                     }
-                    SendKeyCode(SendKeyMode.Key_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    hid.kPress((byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    SendKeyCode(SendKeyMode.Key_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    hid.kRelease((byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
             }
             return false;
@@ -167,19 +96,19 @@ public class Keyboard extends AppCompatActivity {
                 case MotionEvent.ACTION_DOWN:
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     if (FnEnable) {
-                        keycode = new byte[]{0x05, 0, 0x4c, 0, 0, 0, 0, 0};
-                        SendKeyCode(SendKeyMode.Send_Only, (byte) 0);
+                        hid.kCode = new byte[]{0x05, 0, 0x4c, 0, 0, 0, 0, 0};
+                        hid.kSend();
                     } else {
-                        SendKeyCode(SendKeyMode.Key_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                        hid.kPress((byte) Integer.parseInt(v.getTag().toString(), 16));
                     }
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
                     if (FnEnable) {
-                        keycode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
-                        SendKeyCode(SendKeyMode.Send_Only, (byte) 0);
+                        hid.kCode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
+                        hid.kSend();
                     } else {
-                        SendKeyCode(SendKeyMode.Key_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                        hid.kRelease((byte) Integer.parseInt(v.getTag().toString(), 16));
                     }
                     break;
             }
@@ -194,11 +123,11 @@ public class Keyboard extends AppCompatActivity {
             switch (e.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
-                    SendKeyCode(SendKeyMode.Ctrl_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    hid.kPress_c((byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    SendKeyCode(SendKeyMode.Ctrl_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    hid.kRelease_c((byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
             }
             return false;
@@ -212,11 +141,11 @@ public class Keyboard extends AppCompatActivity {
             switch (e.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
-                    SendKeyCode(SendKeyMode.Key_Add, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    hid.kPress((byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    SendKeyCode(SendKeyMode.Key_Del, (byte) Integer.parseInt(v.getTag().toString(), 16));
+                    hid.kRelease((byte) Integer.parseInt(v.getTag().toString(), 16));
                     break;
             }
             return false;
