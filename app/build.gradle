@@ -9,8 +9,8 @@ android {
         applicationId "org.sucareto.androidhidkeyboard"
         minSdk 29
         targetSdk 31
-        versionCode 7
-        versionName '1.4'
+        versionCode 9
+        versionName '1.5'
     }
 
     buildTypes {
