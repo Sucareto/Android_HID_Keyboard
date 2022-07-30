@@ -62,7 +62,7 @@ public class Keyboard extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (hid.kInit()) {
-            Toast.makeText(this, "hid设备文件打开失败", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.msg_e_hid, Toast.LENGTH_LONG).show();
         }
     }
 

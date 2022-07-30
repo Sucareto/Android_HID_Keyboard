@@ -183,8 +183,7 @@
     <string name="MouseRightKeyCode" translatable="false">2</string>
     <string name="MouseMiddleKeyCode" translatable="false">4</string>
 
-    <string name="msg_e_root">Check root permission failed.</string>
-    <string name="msg_e_hid">HID function not turned on?</string>
+    <string name="msg_e_hid">HID device initialization failed</string>
     <string name="touch_area">Touch Area</string>
     <string name="scroll_area">Scroll Area</string>
     <string name="MouseLeftKey">Left</string>

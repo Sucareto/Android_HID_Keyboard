@@ -34,6 +34,9 @@ public class HidController {
     }
 
     public boolean kInit() {
+        if (!SuFile.open("/dev/hidg0").exists()) {
+            return true;
+        }
         try {
             kDev = SuFileOutputStream.open(SuFile.open("/dev/hidg0"));
             kCode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
@@ -46,6 +49,9 @@ public class HidController {
     }
 
     public boolean mInit() {
+        if (!SuFile.open("/dev/hidg1").exists()) {
+            return true;
+        }
         try {
             mDev = SuFileOutputStream.open(SuFile.open("/dev/hidg1"));
             mCode = new byte[]{0, 0, 0, 0};
