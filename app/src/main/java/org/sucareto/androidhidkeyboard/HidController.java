@@ -34,12 +34,12 @@ public class HidController {
     }
 
     public boolean kInit() {
+        kCode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
         if (!SuFile.open("/dev/hidg0").exists()) {
             return true;
         }
         try {
             kDev = SuFileOutputStream.open(SuFile.open("/dev/hidg0"));
-            kCode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
             kDev.write(kCode);
             return false;
         } catch (Exception e) {
@@ -49,12 +49,12 @@ public class HidController {
     }
 
     public boolean mInit() {
+        mCode = new byte[]{0, 0, 0, 0};
         if (!SuFile.open("/dev/hidg1").exists()) {
             return true;
         }
         try {
             mDev = SuFileOutputStream.open(SuFile.open("/dev/hidg1"));
-            mCode = new byte[]{0, 0, 0, 0};
             mDev.write(kCode);
             return false;
         } catch (Exception e) {
@@ -64,6 +64,7 @@ public class HidController {
     }
 
     public void kSend() {
+        if (kDev == null) return;
         try {
             kDev.write(kCode);
         } catch (Exception e) {
@@ -103,6 +104,7 @@ public class HidController {
     }
 
     public void mSend() {
+        if (mDev == null) return;
         try {
             mDev.write(mCode);
         } catch (Exception e) {
