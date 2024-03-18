@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.08" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/mouse_gl_touch"
@@ -113,9 +113,9 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:max="7"
+            android:max="6"
             android:min="1"
-            android:progress="2" />
+            android:progress="3" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
