@@ -3,39 +3,35 @@ plugins {
 }
 
 android {
-    compileSdk 31
-
+    compileSdk 34
     defaultConfig {
         applicationId "org.sucareto.androidhidkeyboard"
-        minSdk 29
-        targetSdk 31
-        versionCode 10
-        versionName '1.5.1'
+        minSdk 26
+        targetSdk 34
+        versionCode 11
+        versionName '1.5.2'
     }
 
     buildTypes {
         release {
-            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding true
     }
+    namespace 'org.sucareto.androidhidkeyboard'
 }
 
 dependencies {
-
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
 }
 
 dependencies {
-    def libsuVersion = '3.2.1'
-    implementation "com.github.topjohnwu.libsu:core:${libsuVersion}"
-    implementation "com.github.topjohnwu.libsu:io:${libsuVersion}"
+    implementation 'com.github.topjohnwu.libsu:io:5.2.2'
 }

@@ -22,12 +22,6 @@ public class Keyboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View root_view = ActivityKeyboardBinding.inflate(getLayoutInflater()).getRoot();
-        root_view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
-                | View.SYSTEM_UI_FLAG_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         setContentView(root_view);
 
         findViewById(R.id.BtnSpace).setOnTouchListener(new SpaceOnTouch());
@@ -71,18 +65,17 @@ public class Keyboard extends AppCompatActivity {
         @Override
         public boolean onTouch(View v, MotionEvent e) {
             switch (e.getAction()) {
-                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_DOWN -> {
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     if (FnEnable) {
                         startActivity(new Intent(Keyboard.this, Mouse.class));
                         break;
                     }
                     hid.kPress((byte) Integer.parseInt(v.getTag().toString(), 16));
-                    break;
-                case MotionEvent.ACTION_UP:
-                case MotionEvent.ACTION_CANCEL:
+                }
+                case MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     hid.kRelease((byte) Integer.parseInt(v.getTag().toString(), 16));
-                    break;
+                }
             }
             return false;
         }
@@ -93,7 +86,7 @@ public class Keyboard extends AppCompatActivity {
         @Override
         public boolean onTouch(View v, MotionEvent e) {
             switch (e.getAction()) {
-                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_DOWN -> {
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     if (FnEnable) {
                         hid.kCode = new byte[]{0x05, 0, 0x4c, 0, 0, 0, 0, 0};
@@ -101,16 +94,15 @@ public class Keyboard extends AppCompatActivity {
                     } else {
                         hid.kPress((byte) Integer.parseInt(v.getTag().toString(), 16));
                     }
-                    break;
-                case MotionEvent.ACTION_UP:
-                case MotionEvent.ACTION_CANCEL:
+                }
+                case MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     if (FnEnable) {
                         hid.kCode = new byte[]{0, 0, 0, 0, 0, 0, 0, 0};
                         hid.kSend();
                     } else {
                         hid.kRelease((byte) Integer.parseInt(v.getTag().toString(), 16));
                     }
-                    break;
+                }
             }
             return false;
         }
@@ -121,14 +113,13 @@ public class Keyboard extends AppCompatActivity {
         @Override
         public boolean onTouch(View v, MotionEvent e) {
             switch (e.getAction()) {
-                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_DOWN -> {
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     hid.kPress_c((byte) Integer.parseInt(v.getTag().toString(), 16));
-                    break;
-                case MotionEvent.ACTION_UP:
-                case MotionEvent.ACTION_CANCEL:
+                }
+                case MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     hid.kRelease_c((byte) Integer.parseInt(v.getTag().toString(), 16));
-                    break;
+                }
             }
             return false;
         }
@@ -139,14 +130,13 @@ public class Keyboard extends AppCompatActivity {
         @Override
         public boolean onTouch(View v, MotionEvent e) {
             switch (e.getAction()) {
-                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_DOWN -> {
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     hid.kPress((byte) Integer.parseInt(v.getTag().toString(), 16));
-                    break;
-                case MotionEvent.ACTION_UP:
-                case MotionEvent.ACTION_CANCEL:
+                }
+                case MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     hid.kRelease((byte) Integer.parseInt(v.getTag().toString(), 16));
-                    break;
+                }
             }
             return false;
         }
@@ -157,16 +147,14 @@ public class Keyboard extends AppCompatActivity {
         @Override
         public boolean onTouch(View v, MotionEvent e) {
             switch (e.getAction()) {
-                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_DOWN -> {
                     v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                     FnEnable = true;
-                    break;
-                case MotionEvent.ACTION_UP:
-                case MotionEvent.ACTION_CANCEL:
-                    FnEnable = false;
-                    break;
-                default:
+                }
+                case MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> FnEnable = false;
+                default -> {
                     return false;
+                }
             }
             ((Button) findViewById(R.id.Btn12)).setText(getResources().getString(FnEnable ? R.string.KeyText78 : R.string.KeyText12));//Insert
             findViewById(R.id.Btn12).setTag(getResources().getString(FnEnable ? R.string.KeyCode78 : R.string.KeyCode12));
