@@ -25,7 +25,15 @@
 
 ### 已测试设备：
 
-* OnePlus 7 Pro (guacamole) Oxygen OS 11.0.3.1.GM21AA
+* OnePlus 7 Pro (guacamole) Oxygen OS 11.0.9.1.GM21BA
+* OnePlus 13T (pagani) ColorOS 15.0 PKX110_15.0.2.107(CN01)
+
+### 项目现状：
+
+* 基本功能已实现，但因为 Android 开发经验不足，无法继续优化和实现新功能，暂时停止更新。
+* 目前键盘布局、按钮监听的实现效率低下，可能会出现卡键的状态，需要重新实现更好的布局方案。
+* 写入 HID 数据用的是 SuFileOutputStream，只能写入无法读取，需要寻找更好的实现。
+* 创建 HID 设备操作依赖 USB Gadget Tool 实现，且只能创建键盘 & 鼠标，也许可以在本程序内实现一个创建 HID 设备的功能页。
 
 ### 感谢：
 
@@ -34,3 +42,4 @@
 * [libsu](https://github.com/topjohnwu/libsu)：提供了 root 操作相关库
 * [sjy0079](https://github.com/sjy0079)：提供了编码思路，指导了代码编写
 * [メリーゴーランド](https://twitter.com/adashima_staff/status/1321866890294210560)：写代码时听的歌
+* [一加手机型号汇总](https://github.com/KHwang9883/MobileModels/blob/master/brands/oneplus.md)：手机代号列表
