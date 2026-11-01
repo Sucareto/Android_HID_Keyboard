@@ -1,5 +1,7 @@
 # Android HID Keyboard
 
+**本项目开发已结束，如需性能改进或新功能，请使用 [Hidora](https://github.com/Sucareto/Hidora)**
+
 将你的 Android 手机变成即插即用的 USB 键盘 & 鼠标！  
 可用于控制 PC，智能电视，手机等支持 USB 输入的设备，受控端不需要权限或安装软件  
 鼠标支持 X/Y 轴相对移动，滚轮按下、滑动，左右键  
